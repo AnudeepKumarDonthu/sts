@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package com.practice.model;
+
+/**
+ * @author Anudeep Kumar
+ *
+ */
+public class UserDetails {
+
+}

@@ -1,0 +1,36 @@
+/**
+ * 
+ */
+package com.practice.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.practice.model.UserDetails;
+
+/**
+ * @author Anudeep Kumar
+ *
+ */
+@Controller
+public class LoginController {
+
+	@RequestMapping(value = "/PracticeRoot")
+	public String login(Model model) {
+		model.addAttribute(new UserDetails());
+		return "PracticeRoot";
+
+	}
+
+	@RequestMapping(value="/userDetails")
+	public String loginCheck(@ModelAttribute("UserDetails") UserDetails userDetails) {
+		System.out.println("userDetails" + userDetails.getUserid());
+		System.out.println("userDetails" + userDetails.getPassword());
+		return "hello";
+
+	}
+
+}

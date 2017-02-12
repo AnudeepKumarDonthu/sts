@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package com.practice.service;
+
+/**
+ * @author Anudeep Kumar
+ *
+ */
+public class LoginService {
+
+}

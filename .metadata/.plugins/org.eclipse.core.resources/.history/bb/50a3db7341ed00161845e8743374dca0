@@ -1,0 +1,20 @@
+/**
+ * 
+ */
+package com.practice.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+
+/**
+ * @author Anudeep Kumar
+ *
+ */
+@Controller
+public class HelloController {
+
+	public String sayHello(Model model) {
+		return "hello";
+	}
+
+}

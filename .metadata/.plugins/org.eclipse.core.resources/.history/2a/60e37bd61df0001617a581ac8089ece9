@@ -1,0 +1,10 @@
+package com.practice.service;
+
+import java.util.List;
+
+
+public interface LoginService {
+
+	void printData();
+
+}

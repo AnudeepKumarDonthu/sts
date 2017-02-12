@@ -1,0 +1,15 @@
+/**
+ * 
+ */
+package com.practice.model;
+
+/**
+ * @author Anudeep Kumar
+ *
+ */
+public class UserDetails {
+
+	private String userid;
+	private String password;
+
+}
