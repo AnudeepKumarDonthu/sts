@@ -1,0 +1,18 @@
+/**
+ * 
+ */
+package com.practice.service;
+
+import com.practice.reposiroty.HibernateDeatilsRepository;
+import com.practice.reposiroty.HibernateDeatilsRepositoryImpl;
+
+/**
+ * @author Anudeep Kumar
+ *
+ */
+public class DetailsServiceImpl {
+	
+	private HibernateDeatilsRepository hdr= new HibernateDeatilsRepositoryImpl();
+	
+
+}

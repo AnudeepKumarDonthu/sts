@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package com.practice.reposiroty;
+
+/**
+ * @author Anudeep Kumar
+ *
+ */
+public class HibernateDeatilsRepositoryImpl {
+
+}

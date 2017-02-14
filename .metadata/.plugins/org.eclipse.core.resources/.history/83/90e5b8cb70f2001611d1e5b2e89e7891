@@ -1,0 +1,33 @@
+/**
+ * 
+ */
+package com.practice.reposiroty;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.practice.model.Details;
+
+/**
+ * @author Anudeep Kumar
+ *
+ */
+public class HibernateDeatilsRepositoryImpl {
+
+	public List<Details> findAll() {
+		List<Details> detailsList = new ArrayList<Details>();
+		Details d1 = new Details();
+		d1.setfName("Anudeep");
+		d1.setlName("Kumar");
+		Details d2 = new Details();
+		d1.setfName("Uma");
+		d1.setlName("Akurathi");
+		Details d3 = new Details();
+		d1.setfName("Avinash");
+		d1.setlName("Babu");
+		detailsList.add(d1);
+		detailsList.add(d2);
+		detailsList.add(d3);
+		return detailsList;
+	}
+}
