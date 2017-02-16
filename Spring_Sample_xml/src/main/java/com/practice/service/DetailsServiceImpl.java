@@ -7,7 +7,6 @@ import java.util.List;
 
 import com.practice.model.Details;
 import com.practice.reposiroty.HibernateDeatilsRepository;
-import com.practice.reposiroty.HibernateDeatilsRepositoryImpl;
 
 /**
  * @author Anudeep Kumar
@@ -16,6 +15,14 @@ import com.practice.reposiroty.HibernateDeatilsRepositoryImpl;
 public class DetailsServiceImpl implements DetailsService {
 
 	private HibernateDeatilsRepository hdr;
+
+	public DetailsServiceImpl() {
+
+	}
+
+	public DetailsServiceImpl(HibernateDeatilsRepository hdr) {
+		this.hdr = hdr;
+	}
 
 	/*
 	 * (non-Javadoc)

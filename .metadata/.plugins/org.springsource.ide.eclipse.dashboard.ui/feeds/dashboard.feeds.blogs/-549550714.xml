@@ -5,7 +5,93 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2017-02-13T18:38:00Z</updated>
+  <updated>2017-02-15T14:23:00Z</updated>
+  <entry>
+    <title>Spring Cloud Data Flow 1.2 M1 released</title>
+    <link rel="alternate" href="https://spring.io/blog/2017/02/15/spring-cloud-data-flow-1-2-m1-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Thomas Risberg</name>
+    </author>
+    <id>tag:spring.io,2017-02-15:2844</id>
+    <updated>2017-02-15T14:23:00Z</updated>
+    <content type="html">&lt;p&gt;On behalf of the team, I am excited to announce the release of the first milestone of Spring Cloud Data Flow 1.2. &lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note:&lt;/em&gt; A great way to start using this new release(s) is to follow the &lt;a href="http://cloud.spring.io/spring-cloud-dataflow/#spring-cloud-data-flow-implementations"&gt;release matrix&lt;/a&gt; on the project page, which includes the download coordinates and the links to the reference guide.&lt;/p&gt;
+&lt;p&gt;Over the last few weeks, we have added new features and improvements to the overall orchestration of data microservices. The following new features were included in the 1.2.0.M1 release: &lt;/p&gt;&lt;h3&gt;&lt;a href="#core" class="anchor" name="core"&gt;&lt;/a&gt;Core&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Introduce dedicated prefixes for deployment properties. Using the deployer properties is as simple as &lt;code&gt;deployer.&amp;lt;appname&amp;gt;.xxx&lt;/code&gt; as opposed to &lt;code&gt;app.&amp;lt;appname&amp;gt;.spring.cloud.deployer.xxx&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Introduce a new REST-API controller and shell support to cleanup Task Executions&lt;/li&gt;
+  &lt;li&gt;Foundation work to consolidate the use of controllers between Task deployments and Task Executions&lt;/li&gt;
+  &lt;li&gt;Consolidate REST-API call traces and return codes for consistency&lt;/li&gt;
+  &lt;li&gt;Adds &lt;a href="http://docs.spring.io/spring-cloud-dataflow/docs/1.2.0.M1/reference/htmlsingle/#customizing-authorization"&gt;role-based access control&lt;/a&gt; to define who has access to create, deploy, destroy, or view streams/tasks. This works seamlessly in coordination with the supported &lt;a href="http://docs.spring.io/spring-cloud-dataflow/docs/1.2.0.M1/reference/htmlsingle/#configuration-security"&gt;authentication methods&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Performance optimizations to “stream list” operation. Instead of making individual calls for each app associated with the stream, the newly introduced &lt;code&gt;MultiStateAppDeployer&lt;/code&gt; SPI operation invokes a call per stream that queries all the application statuses in a single network call&lt;/li&gt;
+  &lt;li&gt;Improves error reporting for “stream list” operation&lt;/li&gt;
+&lt;/ul&gt;&lt;h3&gt;&lt;a href="#dashboard" class="anchor" name="dashboard"&gt;&lt;/a&gt;Dashboard&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Adds a convenient option in “About” tab from the Dashboard to download compatible Shell application&lt;/li&gt;
+  &lt;li&gt;Adds connectivity between Tasks and Batch-jobs in the Dashboard. The batch-job “details view” can be accessed from the Task-list page and likewise, the task “details view” can be accessed from the Batch-list page.&lt;/li&gt;
+  &lt;li&gt;Adds role-based access control integration to the Dashboard&lt;/li&gt;
+&lt;/ul&gt;&lt;h3&gt;&lt;a href="#a-href-https-github-com-spring-cloud-stream-app-starters-out-of-the-box-stream-applications-a" class="anchor" name="a-href-https-github-com-spring-cloud-stream-app-starters-out-of-the-box-stream-applications-a"&gt;&lt;/a&gt;&lt;a href="https://github.com/spring-cloud-stream-app-starters/"&gt;Out-of-the-box Stream Applications&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Following new applications were added and it is targeted to be released in the upcoming &lt;a href="http://docs.spring.io/spring-cloud-stream-app-starters/docs/Bacon.BUILD-SNAPSHOT/reference/html/"&gt;Bacon release-train&lt;/a&gt;:&lt;br/&gt;&lt;ul&gt;&lt;br/&gt; &lt;li&gt;MongoDB Sink&lt;/li&gt;&lt;br/&gt; &lt;li&gt;PGCopy Sink&lt;/li&gt;&lt;br/&gt; &lt;li&gt;Aggregator Processor&lt;/li&gt;&lt;br/&gt; &lt;li&gt;Header-enricher Processor&lt;/li&gt;&lt;br/&gt;&lt;/ul&gt;&lt;/li&gt;
+  &lt;li&gt;Add improvements to core app generation framework in the app-starters project that allows selectively upgrading dependent release versions. We can independently upgrade Spring Boot, Spring Integration or any other dependency at each application level and generate kafka, rabbitmq, or any other binder based applications more easily.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Review the &lt;a href="https://github.com/spring-cloud/spring-cloud-dataflow/milestone/13?closed=1"&gt;1.2.0.M1 (core)&lt;/a&gt; / &lt;a href="https://github.com/spring-cloud/spring-cloud-dataflow-ui/milestone/12?closed=1"&gt;1.2.0.M1 (ui)&lt;/a&gt; release markers to learn more about the incremental improvements. &lt;/p&gt;&lt;h3&gt;&lt;a href="#next-milestone" class="anchor" name="next-milestone"&gt;&lt;/a&gt;Next Milestone&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Include core foundation work to support Docker artifacts as first-class citizen in shell, dsl, and the UI.&lt;/li&gt;
+  &lt;li&gt;The ability to orchestrate “composition of batch-jobs or tasks” is making progress. A new set of DSL primitives to support this from shell/UI is underway, too.&lt;/li&gt;
+  &lt;li&gt;Significant refactoring of core constructs around controllers, dsl, and REST-APIs underway to support “application grouping” functionality. Apart from the ability to orchestrate Spring Cloud Stream or Spring Cloud Task applications, this new model would allow orchestration for any Spring Boot application. There will be an option to define the application groups and such “groups” can be tagged by &amp;ldquo;labels&amp;rdquo;, so it will be then easy to perform group operations at the “label” level such group-deploy or group-destroy. For example, a stream is a specialization of a “group” that includes source, processor(s), and sink type of applications in it.&lt;/li&gt;
+  &lt;li&gt;We envision further evolving “application grouping” capability to stream versioning, too. Stay tuned!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A few of us from the Spring Cloud Data Flow team will be at &lt;a href="https://devnexus.com/s/index"&gt;DevNexus&lt;/a&gt; next week. Please do consider attending the &lt;a href="https://spring.io/blog/2017/02/01/spring-team-at-devnexus-2017"&gt;sessions&lt;/a&gt; to learn more about these feature capabilities.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Tips: JOOQ</title>
+    <link rel="alternate" href="https://spring.io/blog/2017/02/15/spring-tips-jooq" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2017-01-26:2811</id>
+    <updated>2017-02-15T01:01:00Z</updated>
+    <content type="html">&lt;p&gt;Speaker: &lt;a href="https://www.twitter.com/starbuxman"&gt;Josh Long&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Hi Spring fans! In this tip, we&amp;rsquo;ll look at jOOQ (a fluent API for typesafe SQL query construction and execution) to quickly and easily interface with our SQL database.&lt;/p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/j5QqHSIEcPE?list=PLgGXSWYM2FpPw8rV0tZoMiJYSCiLhPnOc" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content>
+  </entry>
+  <entry>
+    <title>This Week in Spring - February 14th, 2017</title>
+    <link rel="alternate" href="https://spring.io/blog/2017/02/14/this-week-in-spring-february-14th-2017" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2017-02-14:2843</id>
+    <updated>2017-02-14T19:50:00Z</updated>
+    <content type="html">&lt;p&gt;Welcome to another installment of &lt;em&gt;This Week in Spring!&lt;/em&gt; It&amp;rsquo;s Valentines Day for some, and so happy Valentines day to you! This week I&amp;rsquo;m in Memphis, Tennessee for business and then it&amp;rsquo;s off to Saint Louis where I&amp;rsquo;ll be presenting on &lt;a href="https://www.meetup.com/Saint-Louis-Spring-Meetup/events/236875279/"&gt;Reactive Spring with my buddy Mark Heckler (join us!)&lt;/a&gt;, then it&amp;rsquo;s off to Atlanta, Georgia, ahead of next week&amp;rsquo;s &lt;a href="https://www.devnexus.com/s/speakers/1284"&gt;big DevNexus show&lt;/a&gt;. Check out &lt;a href="https://spring.io/blog/2017/02/01/spring-team-at-devnexus-2017"&gt;what Pivotal is up to at the event!&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;As usual, we&amp;rsquo;ve got a lot to cover so let&amp;rsquo;s get going!&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Last week, in another installment of Spring Tips, I &lt;a href="https://spring.io/blog/2017/02/08/spring-tips-distributed-tracing-with-zipkin"&gt;looked at distributed tracing with Spring Cloud Sleuth and Zipkin&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Cloud Task lead Michael Minella has just announced &lt;a href="https://spring.io/blog/2017/02/09/spring-cloud-task-1-2-0-m1-is-now-available"&gt;that Spring Cloud Task 1.2.0.M1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Marcin Grzejszczak has just announced &lt;a href="https://spring.io/blog/2017/02/09/spring-cloud-pipelines-1-0-0-m3-released"&gt;Spring Cloud Pipelines 1.0.0.M3 with complete support for blue-green deployment on Cloud Foundry&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;check out &lt;a href="https://spring.io/blog/2017/02/13/springone-platform-2016-replay-spring-data-hazelcast-fluently-accessing-distributed-repositories"&gt;this SpringOne platform 2016 talk on Spring Data Hazelcast repositories&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;there&amp;rsquo;s a good article on &lt;a href="https://dzone.com/articles/spring-boot-actuator-a-complete-guide"&gt;the Spring Boot Actuator support on Pivotal Web Services&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;this S1P talk on streaming live &lt;a href="https://spring.io/blog/2017/02/13/springone-platform-2016-replay-streaming-live-data-and-the-hadoop-ecosystem"&gt;data in the Hadoop ecosystem looks interesting&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Oleg Zhurakousky gives a nice look at &lt;a href="https://spring.io/blog/2017/02/13/springone-platform-2016-replay-spring-with-apachenifi"&gt;using Apache NiFi with Spring&lt;/a&gt; with this S1P talk&lt;/li&gt;
+  &lt;li&gt;our pal Andreas Evers gives a nice look at &lt;a href="https://spring.io/blog/2017/02/13/springone-platform-2016-replay-writing-comprehensive-and-guaranteed-up-to-date-rest-api-documentation"&gt;writing comprehensive documentation with Spring REST Docs in this S1P talk&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;RedHat&amp;rsquo;s Christian Posta&amp;rsquo;s S1P talk on &lt;a href="https://spring.io/blog/2017/02/13/springone-platform-2016-replay-real-world-microservices-with-spring-cloud-netflix-oss-and-kubernetes"&gt;real-world microservices with Spring Cloud and Kubernetes looks interesting&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Want to learn more on Spring Cloud Data Flow? Check out &lt;a href="https://spring.io/blog/2017/02/13/springone-platform-2016-replay-orchestrate-all-the-things-with-spring-cloud-data-flow"&gt;this S1P talk, &lt;em&gt;Spring Cloud Data Flow: Orchestrate All The Things&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Target have just open-sourced &lt;a href="http://target.github.io/infrastructure/Win_the_cloud_with_Winnaker"&gt;Winnaker&lt;/a&gt; their auditing tool for Spinnaker. Spinnaker is Netflix&amp;rsquo;s Spring Boot-powered continuous delivery platform. Pivotal, Netflix, Google and many others besides are all contributors to Spinnaker. You can run Spinnaker &lt;a href="https://cloud.spring.io/spring-cloud-spinnaker/"&gt;on Cloud Foundry, too&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;I thought this interview with &lt;a href="https://soundcloud.com/pivotal-insights/put-an-end-to-it-managing-finite-microservices-tasks-ep-17"&gt;Michael Minella on short lived microservice tasks was a great listen&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;hashicorp have just &lt;a href="https://www.hashicorp.com/blog/cloud-foundry-hashicorp-vault-service-broker.html"&gt;unveiled their Vault Cloud Foundry service broker&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;check out 451Research&amp;rsquo;s look &lt;a href="https://451research.com/report-short?alertid=305&amp;contactid=0036000001lAfK6AAK&amp;entityId=91591&amp;type=mis&amp;utm_campaign=market-insight&amp;utm_content=newsletter&amp;utm_medium=email&amp;utm_source=sendgrid&amp;utm_term=91591-Pivotal+pitches+Spring+Cloud+Data+Flow+for+continuous+data+processing"&gt;at Spring Cloud Data Flow&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;This talk looks at how &lt;a href="https://www.youtube.com/watch?v=E708csv4XgY"&gt;Instagram uses RabbitMQ to handle asynchronous tasks at scale&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Chris Richardson has updated his &lt;a href="http://microservices.io/patterns/index.html"&gt;microservices pattern portal to include new patterns&lt;/a&gt; - &lt;em&gt;service deployment platform&lt;/em&gt;, &lt;em&gt;decomposition by subdomain&lt;/em&gt;, &lt;em&gt;decomposition by business capability&lt;/em&gt; and &lt;em&gt;externalized configuration&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;Randy Shoup provides a &lt;a href="https://twitter.com/randyshoup/status/831215732234989568"&gt;fascinating look at autonomous teams in this interview&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;want to &lt;a href="https://github.com/joinfaces/joinfaces"&gt;use Java Server Faces and Spring Boot&lt;/a&gt;?&lt;/li&gt;
+  &lt;li&gt;the Baeldung blog has a nice &lt;a href="http://www.baeldung.com/executable-jar-with-maven"&gt;look at how to create executable &lt;code&gt;.jar&lt;/code&gt; applications&lt;/a&gt;. It looks at various options, including the Spring Boot fat-&lt;code&gt;.jar&lt;/code&gt; approach.&lt;/li&gt;
+  &lt;li&gt;our pal Nicolas Frankel is back at it again, this time &lt;a href="https://blog.frankel.ch/jvm-security/2/#gsc.tab=0"&gt;with a look at how to achieve a self-contained &lt;code&gt;.jar&lt;/code&gt; that is &lt;em&gt;also&lt;/em&gt; signed&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;</content>
+  </entry>
   <entry>
     <title>SpringOne Platform 2016 Replay: Spring Data Hazelcast: Fluently Accessing Distributed Repositories</title>
     <link rel="alternate" href="https://spring.io/blog/2017/02/13/springone-platform-2016-replay-spring-data-hazelcast-fluently-accessing-distributed-repositories" />
@@ -386,83 +472,5 @@ We have some plans for high-level API for &lt;a href="https://kafka.apache.org/d
   &lt;li&gt;Spring Cloud Sleuth &lt;a href="https://github.com/spring-cloud/spring-cloud-sleuth/milestone/21?closed=1"&gt;1.1.2.RELEASE&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;And, as always, we welcome feedback: either on &lt;a href="https://github.com/spring-cloud"&gt;GitHub&lt;/a&gt;, on &lt;a href="https://gitter.im/spring-cloud/spring-cloud"&gt;gitter&lt;/a&gt;, on &lt;a href="http://stackoverflow.com/questions/tagged/spring-cloud"&gt;Stack Overflow&lt;/a&gt;, or on &lt;a href="https://twitter.com/SpringCloud"&gt;Twitter&lt;/a&gt;.&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Cloud Foundry Manifest Editor Beta released for Visual Studio Code</title>
-    <link rel="alternate" href="https://spring.io/blog/2017/02/03/cloud-foundry-manifest-editor-beta-released-for-visual-studio-code" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Martin Lippert</name>
-    </author>
-    <id>tag:spring.io,2017-02-03:2826</id>
-    <updated>2017-02-03T09:03:04Z</updated>
-    <content type="html">&lt;p&gt;As part of our activities to support developers around the globe building applications with Spring and deploying those apps to Cloud Foundry and PCF, we are proud to announce our first beta version of the &lt;a href="https://marketplace.visualstudio.com/items?itemName=Pivotal.vscode-manifest-yaml"&gt;Cloud Foundry Manifest editing support&lt;/a&gt; for &lt;a href="https://code.visualstudio.com/"&gt;Visual Studio Code&lt;/a&gt; (on macOS, Linux x64, and Windows).&lt;/p&gt;
-&lt;center&gt;&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/Ao6Mx6Q0XKE?rel=0" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&lt;/center&gt;&lt;h2&gt;&lt;a href="#why-visual-studio-code" class="anchor" name="why-visual-studio-code"&gt;&lt;/a&gt;Why Visual Studio Code?&lt;/h2&gt;
-&lt;p&gt;Visual Studio Code is a lightweight and open-source code editor that runs on macOS, Linux x64, and Windows. It is based on an interesting architecture with regards to extensibility. Support for languages in Visual Studio Code gets implemented as so called “language servers”. Those language servers are independent of the editor that you use. The editor and the language server are connected using a protocol (called the language server protocol). Even though Visual Studio Code introduced this protocol, other editors and IDEs started to adopt this language server protocol - like the Eclipse IDE (from version 4.7 on) or Eclipse Che as a cloud IDE. Other lightweight editors like Sublime Text and Atom will likely offer support in the near future, too. As a result, we can focus on implementing the Cloud Foundry manifest editor support as an independent language server and you can add this support to the editor or IDE of your choice.&lt;/p&gt;
-&lt;p&gt;Visual Studio Code introduced this protocol and offers the best support for it at the moment - including a nice marketplace for those extensions that allow a smooth and easy experience installing and using them. Therefore, as a first step, our language server for Cloud Foundry manifest files is now available on that marketplace. Open your installation of Visual Studio Code, go to the extensions section, and search for “manifest”. The Cloud Foundry Manifest Editor support will show up.&lt;/p&gt;&lt;h2&gt;&lt;a href="#working-with-manifest-files" class="anchor" name="working-with-manifest-files"&gt;&lt;/a&gt;Working with manifest files&lt;/h2&gt;
-&lt;p&gt;Once installed, it helps you working with Cloud Foundry manifest files. It provides content-assist for properties and certain values, validates the property keys and values (to avoid typos and surprises when deploying the app), and provides extensive hover help.&lt;/p&gt;
-&lt;p&gt;The content-assist can also provide help entering certain values that depend on your specific Cloud Foundry target that you use. To be more specific, the tooling infers the available buildpacks as well as a list of service instances that you have around on your Cloud Foundry target. Once that information is available, it becomes super easy to define the buildpack or services in your Cloud Foundry manifest files.&lt;/p&gt;
-&lt;p&gt;In order to get the necessary information, the tooling uses the CF CLI configuration and its access token. So whatever you have configured in your CF CLI (e.g. your API endpoint + space) will be used automatically to gather the information about buildpacks and services on demand (as long as you are logged into the CF target on the CLI).&lt;/p&gt;&lt;h2&gt;&lt;a href="#outlook" class="anchor" name="outlook"&gt;&lt;/a&gt;Outlook&lt;/h2&gt;
-&lt;p&gt;This marks our first step towards implementing tooling in an IDE-agnostic way, adopting the language server protocol from Visual Studio Code - in addition to our work on the Eclipse-based Spring Tool Suite and our ongoing support for Jetbrains to improve their awesome Spring tooling in IntelliJ even further. And since this is just our first step here, there is more to come in 2017, like new language servers around Spring and Spring Boot, improved versions of the manifest editing support, and more options for editors and IDEs to plug this into. One of those options will remain the Spring Tool Suite, while other (lightweight) editors and IDEs will get awesome Spring and Spring Boot tooling that way, too. Stay tuned.&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring IO Platform Brussels-RC1</title>
-    <link rel="alternate" href="https://spring.io/blog/2017/02/02/spring-io-platform-brussels-rc1" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Andy Wilkinson</name>
-    </author>
-    <id>tag:spring.io,2017-02-01:2824</id>
-    <updated>2017-02-02T20:50:00Z</updated>
-    <content type="html">&lt;p&gt;It&amp;rsquo;s my pleasure to announce that Spring IO Platform Brussels-RC1 is available now from the &lt;a href="http://repo.spring.io/milestone/"&gt;Spring milestone repository&lt;/a&gt;. &lt;/p&gt;
-&lt;p&gt;The Brussels release introduces the following projects to the Platform:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Spring Kafka 1.1&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The Brussels release also upgrades the versions of a number of projects:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Spring AMQP 1.7&lt;/li&gt;
-  &lt;li&gt;Spring Boot 1.5&lt;/li&gt;
-  &lt;li&gt;Spring Data Ingalls&lt;/li&gt;
-  &lt;li&gt;Spring Integration Java DSL 1.2&lt;/li&gt;
-  &lt;li&gt;Spring Integration Kafka 2.1&lt;/li&gt;
-  &lt;li&gt;Spring LDAP 2.3&lt;/li&gt;
-  &lt;li&gt;Spring Security 4.2&lt;/li&gt;
-  &lt;li&gt;Spring Session 1.3&lt;/li&gt;
-  &lt;li&gt;Spring Web Services 2.4&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The versions of numerous third-party dependencies have also been updated.&lt;/p&gt;
-&lt;p&gt;Please take RC1 for a spin and let us know if you find any problems. All being well, Brussels-RELEASE will be available later this month.&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://platform.spring.io/platform"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-io/platform"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-io/platform/issues"&gt;Issues&lt;/a&gt; | &lt;a href="http://docs.spring.io/platform/docs/Brussels-RC1/reference/htmlsingle"&gt;Documentation&lt;/a&gt;&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Team at Devnexus 2017</title>
-    <link rel="alternate" href="https://spring.io/blog/2017/02/01/spring-team-at-devnexus-2017" />
-    <category term="news" label="News and Events" />
-    <author>
-      <name>Pieter Humphrey</name>
-    </author>
-    <id>tag:spring.io,2017-02-01:2825</id>
-    <updated>2017-02-01T16:31:00Z</updated>
-    <content type="html">&lt;p&gt;If you are joining the Spring Team at the SOLD OUT &lt;a href="https://www.devnexus.com/s/index"&gt;DevNexus 2017&lt;/a&gt; event in Atlanta, GA on February 22-24 2017, here&amp;rsquo;s where you can find us and other Pivotal experts!&lt;/p&gt;
-&lt;p&gt;Pivotal is sponsoring and will be at booth # 7 from 9am-3pm on Thursday Feb 23, and 9am - 6pm on Friday Feb 24.&lt;/p&gt;
-&lt;p&gt;We will have experts available at the booth to talk to you about Spring Boot, Spring Cloud, Spring Cloud Data Flow, Cloud Foundry, and much more. Don’t miss these talks and workshops from Spring &amp;amp; Pivotal leaders on Cloud-Native, Reactive Spring, and much more!&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Wed Feb 22 - Workshops (Full Day)&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://devnexus.com/s/devnexus2017/presentations/15525"&gt;Cloud Native Java Workshop - Josh Long&lt;/a&gt;&lt;br/&gt;WS Room A312 9:00 AM - 5:30 PM&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://devnexus.com/s/devnexus2017/presentations/17473"&gt;Cloud Native Architecture Patterns - Matt Stine&lt;/a&gt;&lt;br/&gt;WS Room A313 9:00 AM - 5:30 PM&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://devnexus.com/s/devnexus2017/presentations/15480"&gt;Microservices based Streaming and Batch Data Processing - Sabby Anandan, Glenn Renfro&lt;/a&gt;&lt;br/&gt;WS Room A314 9:00 AM - 5:30 PM&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Thurs Feb 23&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://devnexus.com/s/devnexus2017/presentations/17213"&gt;Reactive Spring - Josh Long&lt;/a&gt;&lt;br/&gt;Frameworks Track, Room A311 1:00 PM - 2:15 PM&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://devnexus.com/s/devnexus2017/presentations/17236"&gt;Securely Managing Secrets with Vault - Mark Paluch&lt;/a&gt;&lt;br/&gt;Security Track, Room A315 2:30 PM - 3:45 PM&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://devnexus.com/s/devnexus2017/presentations/17523"&gt;Modern batch processing with Spring Batch - Michael Minella&lt;/a&gt;&lt;br/&gt;Tools Track, Room A313 4:00 PM - 5:15 PM&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://devnexus.com/s/devnexus2017/presentations/17320"&gt;Reactive Functional Data Pipelines with Spring Cloud Microservices - Marius Bogoevici, Mark Pollack&lt;/a&gt;&lt;br/&gt;Data Science and Machine Learning Track, Room A403 4:00 PM - 5:15 PM &lt;/p&gt;
-&lt;p&gt;&lt;a href="https://devnexus.com/s/devnexus2017/presentations/17153"&gt;Reactor 3, the Reactive Foundation for Java 8 and Spring 5 - Simon Baslé , Stephane Maldini&lt;/a&gt;&lt;br/&gt;Frameworks Track - Room A311 5:30 PM - 6:45 PM&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Friday Feb 24&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://devnexus.com/s/devnexus2017/presentations/17357"&gt;Data Processing With Microservices - Michael Minella&lt;/a&gt;&lt;br/&gt;Microservices Track - Room A302 10:30 AM - 11:45 AM&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://devnexus.com/s/devnexus2017/presentations/17410"&gt;Breaking the Magician&amp;rsquo;s Code: Diving deeper into Spring Boot internals - Madhura Bhave, Phillip Webb&lt;/a&gt;&lt;br/&gt;Frameworks Track, Room A311 2:30 PM - 3:45 PM&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://devnexus.com/s/devnexus2017/presentations/17198"&gt;This stuff is cool, but HOW CAN I GET MY COMPANY TO DO IT? Businessing the S*** out of Transformative Development!&lt;/a&gt;- Mark Heckler&lt;br/&gt;Agile Track - Room A314 2:30 PM - 3:45 PM&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://devnexus.com/s/devnexus2017/presentations/17446"&gt;Architecture Deep Dive in Spring Security - Joe Grandja&lt;/a&gt;&lt;br/&gt;Security Track - Room A315 2:30 PM - 3:45 PM&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://devnexus.com/s/devnexus2017/presentations/17219"&gt;Clouds &amp;amp; Containers: Give it to Me Straight, What&amp;rsquo;s the Difference &amp;amp; Why Should I Care?&lt;/a&gt;&lt;br/&gt;Microservices Track - Room A302 4:00 PM - 5:15 PM&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://devnexus.com/s/devnexus2017/presentations/17305"&gt;Composing Music in the Cloud - James Weaver&lt;/a&gt;&lt;br/&gt;Cloud Track - Room A305 4:00 PM - 5:15 PM&lt;/p&gt;</content>
   </entry>
 </feed>
