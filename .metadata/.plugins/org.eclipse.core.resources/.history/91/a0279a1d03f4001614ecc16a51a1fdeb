@@ -6,15 +6,12 @@ package com.practice.reposiroty;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.stereotype.Repository;
-
 import com.practice.model.Details;
 
 /**
  * @author Anudeep Kumar
  *
  */
-@Repository("detailsRepository")
 public class HibernateDeatilsRepositoryImpl implements HibernateDeatilsRepository {
 
 	/* (non-Javadoc)

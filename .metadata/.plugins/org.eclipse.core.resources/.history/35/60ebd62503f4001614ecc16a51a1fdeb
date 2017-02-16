@@ -5,8 +5,6 @@ package com.practice.service;
 
 import java.util.List;
 
-import org.springframework.stereotype.Service;
-
 import com.practice.model.Details;
 import com.practice.reposiroty.HibernateDeatilsRepository;
 
@@ -14,7 +12,6 @@ import com.practice.reposiroty.HibernateDeatilsRepository;
  * @author Anudeep Kumar
  *
  */
-@Service("detailsService")
 public class DetailsServiceImpl implements DetailsService {
 
 	private HibernateDeatilsRepository hdr;
