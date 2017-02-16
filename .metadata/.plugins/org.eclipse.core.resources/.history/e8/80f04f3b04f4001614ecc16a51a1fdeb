@@ -5,7 +5,6 @@ package com.practice.service;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.practice.model.Details;
@@ -18,16 +17,15 @@ import com.practice.reposiroty.HibernateDeatilsRepository;
 @Service("detailsService")
 public class DetailsServiceImpl implements DetailsService {
 
-	
 	private HibernateDeatilsRepository hdr;
 
 	public DetailsServiceImpl() {
 
 	}
 
-	/*public DetailsServiceImpl(HibernateDeatilsRepository hdr) {
+	public DetailsServiceImpl(HibernateDeatilsRepository hdr) {
 		this.hdr = hdr;
-	}*/
+	}
 
 	/*
 	 * (non-Javadoc)
@@ -39,7 +37,6 @@ public class DetailsServiceImpl implements DetailsService {
 		return hdr.findAll();
 	}
 
-	@Autowired
 	public void setHdr(HibernateDeatilsRepository hdr) {
 		this.hdr = hdr;
 	}

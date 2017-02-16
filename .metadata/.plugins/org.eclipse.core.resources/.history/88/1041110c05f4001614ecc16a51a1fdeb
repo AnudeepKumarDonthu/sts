@@ -39,7 +39,6 @@ public class DetailsServiceImpl implements DetailsService {
 		return hdr.findAll();
 	}
 
-	@Autowired
 	public void setHdr(HibernateDeatilsRepository hdr) {
 		this.hdr = hdr;
 	}

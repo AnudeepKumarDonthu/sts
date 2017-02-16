@@ -8,12 +8,9 @@
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.2.xsd">
-		<mvc:annotation-driven />
-		<context:annotation-config />
-		<context:component-scan base-package="com.practice"></context:component-scan>
-	<!-- <bean name="detailsRepository"
+	<bean name="detailsRepository"
 		class="com.practice.reposiroty.HibernateDeatilsRepositoryImpl" />
 	<bean name="detailsService" class="com.practice.service.DetailsServiceImpl" autowire="constructor">
-		<constructor-arg index="0" ref="detailsRepository"/>
-	</bean> -->
+<!-- 		<constructor-arg index="0" ref="detailsRepository"/> -->
+	</bean>
 </beans>
