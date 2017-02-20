@@ -1,0 +1,24 @@
+/**
+ * 
+ */
+package com.practice.main;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import com.practice.service.DetailsService;
+import com.practice.service.DetailsServiceImpl;
+
+/**
+ * @author Anudeep Kumar
+ *
+ */
+@Configuration
+public class AppConfig {
+	
+	@Bean(name="detailsRepository")
+	public DetailsService getDetailsService(){
+		return new DetailsServiceImpl();
+	}
+
+}

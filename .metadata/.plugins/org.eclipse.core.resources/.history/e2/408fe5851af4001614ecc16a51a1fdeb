@@ -1,0 +1,23 @@
+/**
+ * 
+ */
+package com.practice.main;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import com.practice.reposiroty.HibernateDeatilsRepositoryImpl;
+
+/**
+ * @author Anudeep Kumar
+ *
+ */
+@Configuration
+public class AppConfig {
+	
+	@Bean(name="detailsRepository")
+	public HibernateDeatilsRepository getHibernateDeatilsRepositoryImpl(){
+		new HibernateDeatilsRepositoryImpl();
+	}
+
+}
