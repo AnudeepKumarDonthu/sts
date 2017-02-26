@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aop-reference-model>
-<aop-project name="mypractice"/>
+<aop-project name="Spring_Sample_xml"/>
 <aop-project name="mydailyuse"/>
 <aop-project name="myexpense"/>
 <aop-project name="Cerebro"/>

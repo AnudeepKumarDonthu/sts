@@ -39,7 +39,7 @@ public class DetailsServiceImpl implements DetailsService {
 		return hdr.findAll();
 	}
 
-	//@Autowired
+	@Autowired
 	public void setHdr(HibernateDeatilsRepository hdr) {
 		System.out.println("Using setter injection");
 		this.hdr = hdr;

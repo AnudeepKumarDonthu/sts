@@ -6,6 +6,7 @@ package com.practice.reposiroty;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Repository;
 
 import com.practice.model.Details;
@@ -20,6 +21,8 @@ public class HibernateDeatilsRepositoryImpl implements HibernateDeatilsRepositor
 	/* (non-Javadoc)
 	 * @see com.practice.reposiroty.HibernateDeatilsRepository#findAll()
 	 */
+	@Value("${data}")
+	private String data;
 	@Override
 	public List<Details> findAll() {
 		List<Details> detailsList = new ArrayList<Details>();
@@ -35,6 +38,7 @@ public class HibernateDeatilsRepositoryImpl implements HibernateDeatilsRepositor
 		detailsList.add(d1);
 		detailsList.add(d2);
 		detailsList.add(d3);
+		System.out.println(data);
 		return detailsList;
 	}
 }
