@@ -12,22 +12,19 @@
 </head>
 <body>
 	<h1>Login</h1>
-	<h2>${messgae}</h2>
-	<spring:message code="language" />
-	<a href="?language=en">English</a>||
-	<a href="?language=tl">Telugu</a>
+	<h2>Login Home</h2>
 	<form:form commandName="UserDetails" action="userdetails" method="post">
 		<table>
 			<tr>
-				<td><spring:message code="user.id" /></td>
+				<td>User Name: </td>
 				<td><form:input path="userid" /></td>
 			</tr>
 			<tr>
-				<td><spring:message code="user.password" /></td>
+				<td>Password: </td>
 				<td><form:password path="password" /></td>
 			</tr>
 			<tr>
-				<td><spring:message code="user.age" /></td>
+				<td>Age: </td>
 				<td><form:password path="age" /></td>
 			</tr>
 			<tr>
