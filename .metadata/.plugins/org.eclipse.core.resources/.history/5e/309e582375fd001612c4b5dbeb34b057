@@ -1,0 +1,23 @@
+/**
+ * 
+ */
+package com.hibernate.practice;
+
+import org.hibernate.Session;
+
+/**
+ * @author Anudeep Kumar
+ *
+ */
+public class HibernateOne {
+
+	public static void main(String[] args) {
+		
+		Session session=HibernateUtils.getSessionFactory().openSession();
+		System.out.println(session);
+		session.close();
+		Runtime.getRuntime().totalMemory();
+
+	}
+
+}

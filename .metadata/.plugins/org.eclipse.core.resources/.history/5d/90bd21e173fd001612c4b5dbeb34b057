@@ -1,0 +1,25 @@
+/**
+ * 
+ */
+package com.hibernate.practice;
+
+import org.hibernate.Session;
+
+/**
+ * @author Anudeep Kumar
+ *
+ */
+public class HibernateOne {
+
+	public static void main(String[] args) {
+		
+		Session session=HibernateUtils.getSessionFactory().openSession();
+		System.out.println(session);
+		if(session instanceof Session){
+			System.out.println("Session Object Created");
+		}
+		
+
+	}
+
+}

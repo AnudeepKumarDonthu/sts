@@ -5,7 +5,33 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2017-02-23T12:46:00Z</updated>
+  <updated>2017-02-28T07:20:21Z</updated>
+  <entry>
+    <title>This Week in Spring -   February 28th, 2017</title>
+    <link rel="alternate" href="https://spring.io/blog/2017/02/28/this-week-in-spring-february-28th-2017" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2017-02-28:2853</id>
+    <updated>2017-02-28T07:20:21Z</updated>
+    <content type="html">&lt;p&gt;Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! As usual, we&amp;rsquo;ve got a lot to cover so let&amp;rsquo;s get to it! My friend Kenny Bastani and I will be doing a training for O&amp;rsquo;Reilly on the first and second of March introducing &lt;a href="https://www.safaribooksonline.com/live-training/courses/building-microservices-with-spring-boot-spring-cloud-and-cloud-foundry/0636920071181/"&gt;all things Spring, Spring Boot, Spring Cloud and Cloud Foundry&lt;/a&gt; - join us!&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Spring web ninja Rossen Stoyanchev just announced the the M5 milestone release of Spring 5, complete with &lt;a href="https://spring.io/blog/2017/02/23/spring-framework-5-0-m5-released"&gt;support for a WebClient testing mechanism&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Eric Bottard has just announced &lt;a href="https://spring.io/blog/2017/02/22/spring-cloud-data-flow-for-cloud-foundry-1-1-1-maintenance-release-available"&gt;Spring Cloud Data Flow for Cloud Foundry 1.1.1&lt;/a&gt; which includes stability improvements, better error handling, network call optimizations and better load performance characteristics&lt;/li&gt;
+  &lt;li&gt;Pivotal&amp;rsquo;s own Chris Sterling explains Cloud Foundry&amp;rsquo;s new &lt;a href="https://content.pivotal.io/blog/building-spring-microservices-with-cloud-foundrys-new-container-networking-stack"&gt;container-networking stack and how it applies to Spring Cloud-based applications&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Reactor project lead &lt;a href="https://spring.io/blog/2017/02/22/reactor-aluminium-sr1-has-landed"&gt;Stephane Maldini just announced Reactor Aluminium SR1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Last week, continuing the Spring Tips series, I looked at &lt;a href="https://spring.io/blog/2017/02/22/spring-tips-apache-mybatis"&gt;how to use Spring Boot with Apache MyBatis&lt;/a&gt;, a technology that is commonly used in high performance organizations like Chinese&amp;rsquo;s mega-merchant Alibaba&lt;/li&gt;
+  &lt;li&gt;The Spring Boot team&amp;rsquo;s Madhura Bhave nd Phillip Webb did &lt;a href="https://speakerdeck.com/philwebb/breaking-the-magicians-code-diving-deeper-into-spring-boot-internals"&gt;a great talk at DevNexus demystifying the inner workings of Spring Boot&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;I loved Adib Saikali&amp;rsquo;s &lt;a href="https://www.youtube.com/watch?v=iyNzYOcuU4I"&gt;look at consumer driven contracts with Spring Cloud Contract at the amazing Toronto Spring User Group&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;This isn&amp;rsquo;t specific to Java or any particular technology, &lt;a href="http://databaseblog.myname.nl/2014/02/unittesting-your-indexes.html"&gt;but it&amp;rsquo;s an interesting post on how to unit test database indexes&lt;/a&gt;. Be sure to read the comments, too.&lt;/li&gt;
+  &lt;li&gt;I was pointed to this post on Java 8&amp;rsquo;s &lt;code&gt;CompletableFuture&lt;/code&gt; the other day. &lt;a href="https://www.slideshare.net/jpaumard/asynchronous-api-in-java8-how-to-use-completablefuture"&gt;It&amp;rsquo;s an oldie-but-a-goodie&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Are you using Neo4j and want to add some niceties to the Neo4j browser? Check out this project, &lt;a href="https://github.com/jexp/spoon-neo4j/"&gt;Spoon, by Neo4j&amp;rsquo;s very own Michael Hunger&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;I loved this video introducing &lt;a href="https://twitter.com/snicoll/status/835405736117170177"&gt;some of the highlights of the Spring Initializr&lt;/a&gt; in Apache NetBeans&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://vimeo.com/205223073"&gt;Chris Richardson and Kenny Bastani gave a great talk on eventual consistency for distributed systems&lt;/a&gt; a few weeks ago, and it&amp;rsquo;s now available online&lt;/li&gt;
+  &lt;li&gt;Spring Data ninja Mark Paluch gave an &lt;em&gt;awesome&lt;/em&gt; talk introducing &lt;a href="https://speakerdeck.com/mp911de/securely-managing-secrets-with-vault"&gt;secret management with Hashicorp&amp;rsquo;s Vault, and the talk is now available online&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+  </entry>
   <entry>
     <title>Spring Framework 5.0 M5 Update</title>
     <link rel="alternate" href="https://spring.io/blog/2017/02/23/spring-framework-5-0-m5-update" />
@@ -577,39 +603,5 @@ Remember to run this step only after you have confirmed that both instances are 
     <content type="html">&lt;p&gt;Speaker: &lt;a href="https://www.twitter.com/starbuxman"&gt;Josh Long&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Hi Spring fans! In this tip, we&amp;rsquo;ll quickly look at how to integrate distributed tracing with Spring Cloud Sleuth and the OpenZipkin project.&lt;/p&gt;
 &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/CFLZJSwbYI0" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content>
-  </entry>
-  <entry>
-    <title>This Week in Spring - February 7th, 2017</title>
-    <link rel="alternate" href="https://spring.io/blog/2017/02/07/this-week-in-spring-february-7th-2017" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2017-02-07:2834</id>
-    <updated>2017-02-07T10:38:00Z</updated>
-    <content type="html">&lt;p&gt;Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! We&amp;rsquo;ve got a lot to cover this week so let&amp;rsquo;s get to it.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Fred Melo is one of Pivotal&amp;rsquo;s brightest and when he talks about data, people listen. Here&amp;rsquo;s your chance to &lt;a href="https://spring.io/blog/2017/02/06/springone-platform-2016-replay-architecting-for-cloud-native-data-data-microservices-done-right-using-spring-cloud"&gt;watch his SpringOne Platform talk on data microservices&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;The RabbitMQ Team has been busy! The RMQ Java Client has some very nice new (non-breaking) new features in &lt;a href="http://www.rabbitmq.com/blog/2016/11/24/rabbitmq-java-client-4-0-is-released"&gt;Metrics, logging and Java NIO&lt;/a&gt;, among other things.&lt;/li&gt;
-  &lt;li&gt;Expanding on the metrics support in RMQ Java Client 4.0, the Rabbit team &lt;a href="http://www.rabbitmq.com/blog/2016/11/30/metrics-support-in-rabbitmq-java-client-4-0"&gt;blogs&lt;/a&gt; about using JMX, Spring Boot Actuator and Coda Hale&amp;rsquo;s awesome DropWizard Metrics library.&lt;/li&gt;
-  &lt;li&gt;I liked this SpringOne Platform talk, from Confluent&amp;rsquo;s Joe Kutner, &lt;a href="https://spring.io/blog/2017/02/06/springone-platform-2016-replay-i-can-t-believe-it-s-not-a-queue-using-kafka-with-spring"&gt;&lt;em&gt;I Can&amp;rsquo;t Believe it&amp;rsquo;s not a Queue: using Apache Kafka with Spring&lt;/em&gt;&lt;/a&gt;. It&amp;rsquo;s a focused look on Apache Kafka, one of the most capable and cloud-native message queues these days - Apache Kafka - with Spring.&lt;/li&gt;
-  &lt;li&gt;Check out Spring Integration and messaging &lt;a href="https://spring.io/blog/2017/02/06/springone-platform-2016-replay-spring-for-apache-kafka"&gt;guru Gary Russell&amp;rsquo;s SpringOne Platform look at Spring for Apache Kafka&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;check out Spring and Spring for Apache Hadoop contributor &lt;a href="https://spring.io/blog/2017/02/06/springone-platform-2016-replay-spring-and-big-data"&gt;Thomas Risberg&amp;rsquo;s look at building big-data pipelines with Spring&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;our friend Toshiaki Maki has &lt;a href="https://github.com/making/beansviz-spring-boot-actuator"&gt;built a &lt;em&gt;really&lt;/em&gt; cool Graphviz visualization of the beans in an application&lt;/a&gt; that&amp;rsquo;s accessible under the &lt;code&gt;/beansviz&lt;/code&gt; endpoint.&lt;/li&gt;
-  &lt;li&gt;Spring Cloud contributor Vinicius Carvalho&amp;rsquo;s SpringOne Platform talk on &lt;a href="https://spring.io/blog/2017/02/06/springone-platform-2016-replay-building-resilient-and-evolutionary-data-microservices"&gt;evolutionary and resilient microservices is one to watch&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Spring Integration Java DSL lead Artem Bilan just &lt;a href="https://spring.io/blog/2017/02/06/spring-for-apache-kafka-1-1-3-available-now"&gt;announced Spring for Apache Kafka 1.1.3&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Spring Cloud ninja Marcin Grzejszczak &lt;a href="https://spring.io/blog/2017/02/06/spring-cloud-camden-sr5-is-available"&gt;just announced Spring Cloud Camden SR5&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;the team behind Spring Tool Suite is cooking up some amazing stuff for Spring Tool Suite 4, and a huge part of that is an extraction of the plugins in STS as language servers that can be used with a variety of other IDEs, including Atom and Microsoft VS Code. As part of the that, &lt;a href="https://spring.io/blog/2017/02/03/cloud-foundry-manifest-editor-beta-released-for-visual-studio-code"&gt;the team has just released the Cloud Foundry &lt;code&gt;manifest.yml&lt;/code&gt; editor&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Spring IO Platform lead &lt;a href="https://spring.io/blog/2017/02/02/spring-io-platform-brussels-rc1"&gt;Andy Wilkinson just announced Spring IO Platform Brussels RC1&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;not one to rest on his laurels, Andy &lt;em&gt;also&lt;/em&gt; just announced &lt;a href="https://spring.io/blog/2017/02/01/spring-io-platform-athens-sr3"&gt;Spring IO Platform Athens SR3&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Are you going to be at the fabulous DevNexus event in Atlanta, GA, later this month? &lt;a href="https://spring.io/blog/2017/02/01/spring-team-at-devnexus-2017"&gt;The Spring team will be there too!&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;seems I missed a good one in January! Check out Muhammad Noor&amp;rsquo;s post on building &lt;a href="https://dzone.com/articles/functional-amp-reactive-spring-along-with-netflix"&gt;reactive based microservices with Spring Cloud and&lt;br/&gt; Reactor&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Rashidi Zin put together a nice example of &lt;a href="https://github.com/rashidi/spring-boot-data-audit"&gt;using Spring Data to support entity auditing&lt;/a&gt;. Very cool Rashidi!&lt;/li&gt;
-  &lt;li&gt;Bruno Krebs put together a very cool post on building &lt;a href="https://hackernoon.com/spring-boot-rest-tdd-from-scratch-15f13ed799e0#.hfy5lyjwl"&gt;a REST API wiht test-driven development (and Spring Boot, naturally)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Mario-Leander Reimer&amp;rsquo;s cloud-native workshop at the OOP17 conference looks pretty darned interesting! I wish I&amp;rsquo;d been there. For those of us that weren&amp;rsquo;t, though, &lt;a href="https://github.com/qaware/hitchhikers-guide-cloudnative"&gt;there is at least his Git repository&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;Speaking of DevNexus, this oldie-but-a-goodie, &lt;a href="https://www.youtube.com/watch?v=X7O11GrHgjE"&gt;&lt;em&gt;Keeping it Clean: Lessons from Open Source and How to Polish&lt;/em&gt;&lt;/a&gt;, from Spring Boot co-lead Phil Webb is definitely a good watch if you haven&amp;rsquo;t seen it&lt;/li&gt;
-  &lt;li&gt;While not, strictly speaking, related to Spring, continuous delivery is the grand unifiying theory behind microservices, agile, TDD, and so many other practices we take for granted today and few people &lt;a href="https://www.youtube.com/watch?v=nauFRW6gYjc"&gt;introduce the rationale behind it better than Chris Farley&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;This post has little to do with Spring itself but it is a &lt;em&gt;very&lt;/em&gt; interesting look at the &lt;a href="https://srvaroa.github.io/jvm/java/openjdk/biased-locking/2017/01/30/hashCode.html"&gt;implications on performance in the JVM that don&amp;rsquo;t override &lt;code&gt;#hashCode&lt;/code&gt; in certain contexts&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
   </entry>
 </feed>

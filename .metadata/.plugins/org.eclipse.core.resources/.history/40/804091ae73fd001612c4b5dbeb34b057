@@ -1,0 +1,19 @@
+/**
+ * 
+ */
+package com.hibernate.practice;
+
+/**
+ * @author Anudeep Kumar
+ *
+ */
+public class HibernateOne {
+
+	public static void main(String[] args) {
+		
+		
+		
+
+	}
+
+}

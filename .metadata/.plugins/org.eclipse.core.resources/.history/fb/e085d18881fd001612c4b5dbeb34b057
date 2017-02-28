@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package com.hibernate.practice;
+
+/**
+ * @author Anudeep Kumar
+ *
+ */
+public class User {
+
+}

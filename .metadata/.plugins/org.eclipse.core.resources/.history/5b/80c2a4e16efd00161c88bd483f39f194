@@ -1,0 +1,20 @@
+/**
+ * 
+ */
+package com.hibernate.practice;
+
+/**
+ * @author Anudeep Kumar
+ *
+ */
+public class Hibernate1 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

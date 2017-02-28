@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 28 Feb, 2017 12:40:04 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+	<class name="com.hibernate.practice.User" table="userdetails">
+		<id name="id" type="int">
+			<column name="USERID" />
+<!-- 			<generator class="increment" /> -->
+		</id>
+		<property name="name" type="java.lang.String">
+			<column name="NAME" />
+		</property>
+		<property name="total" type="int">
+			<column name="TOTAL" />
+		</property>
+		<property name="goal" type="java.lang.String">
+			<column name="GOAL" />
+		</property>
+	</class>
+</hibernate-mapping>
