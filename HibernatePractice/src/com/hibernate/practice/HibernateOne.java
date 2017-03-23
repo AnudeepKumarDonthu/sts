@@ -3,6 +3,8 @@
  */
 package com.hibernate.practice;
 
+import java.util.Date;
+
 import org.hibernate.Session;
 
 /**
@@ -16,10 +18,11 @@ public class HibernateOne {
 		Session session=HibernateUtils.getSessionFactory().openSession();
 		session.beginTransaction();
 		User u = new User();
-		u.setId(1);
+		u.setId(2);
 		u.setName("anudeep");
-		u.setTotal(10);
-		u.setGoal(100);
+		u.getPd().setTotal(10);
+		u.getPd().setGoal(100);
+		u.getUserHistory().add(new UserHistory(new Date(), "Set Goal 1"));
 		session.save(u);
 		System.out.println("User details saved successfully");
 		session.getTransaction().commit();

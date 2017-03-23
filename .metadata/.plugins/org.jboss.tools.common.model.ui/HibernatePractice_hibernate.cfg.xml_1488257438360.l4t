@@ -11,6 +11,8 @@
   </Memento>
   <Memento type="%No text%">
    <Memento collapsed="false" type="Mappings"/>
+   <Memento collapsed="false" type="Properties"/>
+   <Memento collapsed="false" type="Caches"/>
   </Memento>
  </TreeFormPage>
 </Layout>

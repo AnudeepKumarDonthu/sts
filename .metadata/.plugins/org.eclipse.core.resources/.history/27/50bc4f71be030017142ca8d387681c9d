@@ -1,0 +1,33 @@
+/**
+ * 
+ */
+package com.hibernate.practice;
+
+import java.util.Date;
+
+import org.hibernate.Session;
+
+/**
+ * @author Anudeep Kumar
+ *
+ */
+public class HibernateOne {
+
+	public static void main(String[] args) {
+		
+		Session session=HibernateUtils.getSessionFactory().openSession();
+		session.beginTransaction();
+		User u = new User();
+		u.setId(3);
+		u.setName("kumar");
+		u.getPd().setTotal(30);
+		u.getPd().setGoal(300);
+		u.getUserHistory().add(new UserHistory(new Date(), "Set Goal 2"));
+		session.save(u);
+		System.out.println("User details saved successfully");
+		session.getTransaction().commit();
+		session.close();
+
+	}
+
+}

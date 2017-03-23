@@ -3,6 +3,9 @@
  */
 package com.hibernate.practice;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * @author Anudeep Kumar
  *
@@ -12,8 +15,24 @@ public class User {
 
 	private int id;
 	private String name;
-	private int total;
-	private int goal;
+	ProteinData pd = new ProteinData();
+	private Set<UserHistory> userHistory = new HashSet<UserHistory>();
+
+	public Set<UserHistory> getUserHistory() {
+		return userHistory;
+	}
+
+	public void setUserHistory(Set<UserHistory> userHistory) {
+		this.userHistory = userHistory;
+	}
+
+	public ProteinData getPd() {
+		return pd;
+	}
+
+	public void setPd(ProteinData pd) {
+		this.pd = pd;
+	}
 
 	public int getId() {
 		return id;
@@ -29,22 +48,6 @@ public class User {
 
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	public int getTotal() {
-		return total;
-	}
-
-	public void setTotal(int total) {
-		this.total = total;
-	}
-
-	public int getGoal() {
-		return goal;
-	}
-
-	public void setGoal(int goal) {
-		this.goal = goal;
 	}
 
 }

@@ -1,7 +1,7 @@
 {
   "version": "v1",
   "title": "Spring IDE",
-  "timestamp": 1487908557083,
+  "timestamp": 1489725020566,
   "ttl": 10080,
   "helpUrl": "https://aer.ctrlflow.com/spring-ide/help",
   "feedbackUrl": "http://ctrlflow.com/automated-error-reporting",
@@ -10,6 +10,7 @@
   "maxReportSize": 524288,
   "problemsUrl": "https://aer.ctrlflow.com/downloads/spring-ide/problems.zip",
   "problemsTtl": 20160,
+  "interestUrl": "https://aer.ctrlflow.com/spring-ide/community/interest",
   "connectTimeout": 5,
   "socketTimeout": 10,
   "acceptedProducts": [
@@ -39,5 +40,5 @@
   "ignoredStatuses": [
     ":java.net.*:"
   ],
-  "problemsZipLastDownloadTimestamp": 1487908858425
+  "problemsZipLastDownloadTimestamp": 0
 }
