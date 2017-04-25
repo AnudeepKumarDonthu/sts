@@ -1,0 +1,28 @@
+/**
+ * 
+ */
+package com.practice.aop;
+
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.jboss.logging.Logger;
+import org.springframework.stereotype.Component;
+
+/**
+ * @author Anudeep Kumar
+ *
+ */
+@Component
+@Aspect
+public class TrackingAspect {
+
+	Logger logger = Logger.getLogger("obj");
+
+	@Before(
+			"execute(*`*(..))"
+	)
+	public void entering() {
+		logger.trace("Run success");
+	}
+
+}

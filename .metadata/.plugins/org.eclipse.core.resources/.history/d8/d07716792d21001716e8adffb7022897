@@ -1,0 +1,24 @@
+/**
+ * 
+ */
+package com.practice.aop;
+
+import org.aspectj.lang.annotation.Before;
+import org.jboss.logging.Logger;
+
+/**
+ * @author Anudeep Kumar
+ *
+ */
+public class TrackingAspect {
+	
+	Logger logger = Logger.getLogger(clazz);
+	@Before("execute(void doSomeThing())"
+			
+	)
+	public void entering(){
+		
+	}
+	
+
+}

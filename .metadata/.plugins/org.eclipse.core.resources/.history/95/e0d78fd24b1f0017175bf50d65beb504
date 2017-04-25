@@ -1,0 +1,34 @@
+/**
+ * 
+ */
+package com.org.practice;
+
+/**
+ * @author Anudeep Kumar
+ *
+ */
+class A {
+	static void test() {
+
+	}
+
+}
+
+class B extends A {
+	static void test() {
+
+	}
+
+}
+
+public class InheeitenceTest {
+
+	/**
+	 * @param args
+	 */
+
+	public static void main(String[] args) {
+
+	}
+
+}

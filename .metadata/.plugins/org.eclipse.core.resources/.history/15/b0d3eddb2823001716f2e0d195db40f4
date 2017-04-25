@@ -1,0 +1,25 @@
+/**
+ * 
+ */
+package com.org.practice;
+
+import java.math.BigInteger;
+
+/**
+ * @author Anudeep Kumar
+ *
+ */
+public class BigIntCheck {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		long l = 1234567899;
+		BigInteger bi  =new BigInteger("12345678912347859645785478564756333");
+		System.out.println(bi);
+		System.out.println(bi instanceof BigInteger);
+
+	}
+
+}

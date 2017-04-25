@@ -28,7 +28,7 @@
 			</tr>
 			<tr>
 				<td><spring:message code="user.age" /></td>
-				<td><form:password path="age" /></td>
+				<td><form:input path="age" /></td>
 			</tr>
 			<tr>
 				<td></td>
