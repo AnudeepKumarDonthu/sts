@@ -1,0 +1,46 @@
+/**
+ * 
+ */
+package com.org.practice;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+/**
+ * @author Anudeep Kumar
+ *
+ */
+public class IterateMap {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		SamplePOJO s1 = new SamplePOJO();
+		SamplePOJO s2 = new SamplePOJO();
+		SamplePOJO s3 = new SamplePOJO();
+		SamplePOJO s4 = new SamplePOJO();
+		String key1="anudeep1";
+		List<SamplePOJO> list1= new ArrayList<SamplePOJO>();
+		list1.add(s1);
+		list1.add(s2);
+		String key2="anudeep2";
+		List<SamplePOJO> list2= new ArrayList<SamplePOJO>();
+		list2.add(s3);
+		list2.add(s4);
+		Map<String,List<SamplePOJO>> map= new HashMap<String,List<SamplePOJO>>();
+		map.put(key1, list1);
+		map.put(key2, list2);
+		Set<String> keySet= map.keySet();
+		System.out.println(list1);
+		for(String s: keySet){
+			List<SamplePOJO> list=map.get(s);
+			System.out.println(list);
+		}
+
+	}
+
+}

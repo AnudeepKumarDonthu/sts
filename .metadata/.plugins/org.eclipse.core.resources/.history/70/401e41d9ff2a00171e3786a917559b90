@@ -1,0 +1,56 @@
+/**
+ * 
+ */
+package com.org.practice;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+/**
+ * @author Anudeep Kumar
+ *
+ */
+public class IterateMap {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		SamplePOJO s1 = new SamplePOJO();
+		s1.setName("anudeep");
+		s1.setAge(25);
+		SamplePOJO s2 = new SamplePOJO();
+		s2.setName("kumar");
+		s2.setAge(20);
+		SamplePOJO s3 = new SamplePOJO();
+		s3.setName("donthu");
+		s3.setAge(15);
+		SamplePOJO s4 = new SamplePOJO();
+		s4.setName("uma");
+		s4.setAge(10);
+		String key1 = "anudeep1";
+		List<SamplePOJO> list1 = new ArrayList<SamplePOJO>();
+		list1.add(s1);
+		list1.add(s2);
+		String key2 = "anudeep2";
+		List<SamplePOJO> list2 = new ArrayList<SamplePOJO>();
+		list2.add(s3);
+		list2.add(s4);
+		Map<String, List<SamplePOJO>> map = new HashMap<String, List<SamplePOJO>>();
+		map.put(key1, list1);
+		map.put(key2, list2);
+		Set<String> keySet = map.keySet();
+		for (String s : keySet) {
+			List<SamplePOJO> list = map.get(s);
+			for (SamplePOJO sp : list) {
+				System.out.println("Name: " + sp.getName() + "\t" + sp.getAge());
+			}
+		}
+
+	}
+
+}

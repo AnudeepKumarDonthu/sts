@@ -1,0 +1,26 @@
+/**
+ * 
+ */
+package com.restHibernate.model;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+/**
+ * @author Anudeep Kumar
+ *
+ */
+@Entity
+@Table(name = "person_details")
+@JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
+public class PersonDetails {
+
+	private long id;
+	private String name;
+	private int age;
+	private String email;
+	private String city;
+
+}

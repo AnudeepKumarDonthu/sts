@@ -1,5 +1,5 @@
 #Tomcat publish data
-#Fri Apr 14 22:02:43 IST 2017
+#Mon May 01 10:36:59 IST 2017
 org.eclipse.jst.j2ee.server\:MyDetails=C\:\\Softwares\\apache-tomcat-8.5.9\\apache-tomcat-8.5.9\\wtpwebapps\\MyDetails
 org.eclipse.jst.j2ee.server\:mydailyuse=C\:\\Softwares\\apache-tomcat-8.5.9\\apache-tomcat-8.5.9\\wtpwebapps\\mydailyuse
 org.eclipse.jst.j2ee.server\:/binary\:C\:\\Users\\Anudeep\ Kumar\\.m2\\repository\\org\\springframework\\spring-web\\4.2.0.RELEASE\\spring-web-4.2.0.RELEASE.jar=C\:\\Softwares\\apache-tomcat-8.5.9\\apache-tomcat-8.5.9\\wtpwebapps\\mydailyuse\\WEB-INF\\lib\\spring-web-4.2.0.RELEASE.jar

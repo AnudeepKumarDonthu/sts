@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package com.restHibernate.model;
+
+/**
+ * @author Anudeep Kumar
+ *
+ */
+public class PersonDetails {
+
+}
